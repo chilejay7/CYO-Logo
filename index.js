@@ -28,8 +28,14 @@ const questions = [
     },
 ]
 
-const answers = inquirer.prompt(questions);
+writeToFile = () => {
+    fs.writeFile('logo.svg', createSVG(answers));
+}
 
-console.log(answers);
+init = async () => {
+    const answers = await inquirer.prompt(questions);
 
-writeToFile = fs.writeFile('logo.svg', createSVG(answers));
+    console.log(answers);
+}
+
+init();
