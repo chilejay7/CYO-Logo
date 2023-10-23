@@ -26,16 +26,20 @@ const questions = [
         message: `Please enter the name or hex # of the color you would like to use for the logo's background color.`,
         name: 'background'
     },
-]
+];
 
-writeToFile = () => {
-    fs.writeFile('logo.svg', createSVG(answers));
+writeToFile = (fileName, data) => {
+    fs.writeFile(fileName, data, err => {
+        console.log(err);
+    });
 }
 
 init = async () => {
     const answers = await inquirer.prompt(questions);
 
     console.log(answers);
+
+    writeToFile('logo.svg', createSVG(answers));
 }
 
 init();
