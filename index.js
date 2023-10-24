@@ -39,7 +39,7 @@ init = async () => {
 
     console.log(answers);
 
-    writeToFile('logo.svg', createSVG(answers));
+    writeToFile('./examples/logo.svg', createSVG(answers));
 }
 
 init();
