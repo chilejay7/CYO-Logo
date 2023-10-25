@@ -2,10 +2,11 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const createLogo = require('./lib/shapes.js');
 
-const shapes = ['circle', 'triangle', 'square'];
+const shapes = ['Circle', 'Triangle', 'Square'];
 
 const questions = [
-    {
+    {   
+        // This needs a test to make sure the length doens't exceed three characters.
         type: 'input',
         message: `Please enter up to three characters for your logo's text.`,
         name: 'text',
