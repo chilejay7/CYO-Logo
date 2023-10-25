@@ -2,7 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const createLogo = require('./lib/shapes.js');
 
-const shapes = ['Circle', 'Triangle', 'Square'];
+// const shapes = ['Circle', Triangle, 'Square'];
+generateArray();
+console.log(shapesArray);
 
 const questions = [
     {   
@@ -19,7 +21,7 @@ const questions = [
     {
         type: 'list',
         message: 'Please choose a shape for your logo.',
-        choices: shapes,
+        choices: shapesArray,
         name: 'shape',
     },
     {
