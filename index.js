@@ -2,7 +2,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const createLogo = require('./lib/shapes.js');
 
-// const shapes = ['Circle', Triangle, 'Square'];
+// const shapesArray = ['Circle', 'Triangle', 'Square'];
 generateArray();
 console.log(shapesArray);
 
