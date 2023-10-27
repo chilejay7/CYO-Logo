@@ -4,6 +4,15 @@ const Triangle = require('../lib/shapes.js');
 const Circle = require('../lib/shapes.js');
 const Square = require('../lib/shapes.js');
 
+const testData = {
+    text: "lvr",
+    color: "red",
+    shape: "circle",
+    background: "blue",
+}
+
+const { text, color, shape, background } = testData
+
 describe('Shape', () => {
     describe('Create new instance', () => {
         it('should create a new instance of the Shape class', () => {
@@ -23,31 +32,31 @@ describe('Triangle', () => {
 
     describe('Return text argument', () => {
         it('should return the text argument passed to it as a property when called', () => {
-           const triangle = new Triangle('lvr', 'red', 'blue');
+           const triangle = new Triangle(text, color, background);
             
-           expect(triangle.text).toEqual('lvr');
+           expect(triangle.text).toEqual(text);
         })
     });
 
     describe('Return color argument', () => {
         it('should return the color argument passed to it as a property when called', () => {
-           const triangle = new Triangle('lvr', 'red', 'blue');
+           const triangle = new Triangle(text, color, background);
             
-           expect(triangle.color).toEqual('red');
+           expect(triangle.color).toEqual(color);
         })
     });
     
     describe('Return background argument', () => {
         it('should return the background argument passed to it as a property when called', () => {
-           const triangle = new Triangle('lvr', 'red', 'blue');
+           const triangle = new Triangle(text, color, background);
             
-           expect(triangle.background).toEqual('blue');
+           expect(triangle.background).toEqual(background);
         })
     });
 
     describe('render fucntion', () => {
         it('should render the svg logo when the render method is called', () => {
-            const triangle = new Triangle('lvr', 'red', 'blue');
+            const triangle = new Triangle(text, color, background);
             const returnValue = triangle.render();
             expect(returnValue).toBe(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
