@@ -40,7 +40,9 @@ init = async () => {
 
     console.log(answers);
 
-    writeToFile('./examples/logo.svg', createSVG(answers));
+    const { shape } = answers
+
+    writeToFile(`./examples/logo_${shape.toLowerCase()}.svg`, createSVG(answers));
 }
 
 init();
