@@ -53,18 +53,26 @@ describe('Triangle', () => {
            expect(triangle.background).toEqual(background);
         })
     });
+    
+    describe('defines render method', () => {
+        it('should recognize the render property of the Triangle class is a function', () => {
+           const triangle = new Triangle(text, color, background);
+            
+           expect(typeof triangle.render).toBe('function');
+        })
+    });
 
-    describe('render fucntion', () => {
+    describe('Triangle render function', () => {
         it('should render the svg logo when the render method is called', () => {
             const triangle = new Triangle(text, color, background);
-            const returnValue = triangle.render();
-            expect(returnValue).toBe(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+           
+            expect(triangle.super.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
-            <polygon points="150, 18 244, 182 56, 182" fill="blue" />
+            <polygon points="150, 18 244, 182 56, 182" fill="${background}" />
 
-            <text x="150" y="150" font-size="60" text-anchor="middle" fill="red">lvr</text>
+            <text x="150" y="150" font-size="60" text-anchor="middle" fill="${color}">${text}</text>
 
-        </svg>`)
+            </svg>`)
         })
     })
 });
@@ -76,6 +84,14 @@ describe('Circle', () => {
             expect(circle).toBeInstanceOf(Circle);
         })
     });
+
+    describe('text', () => {
+        it('should output the text value of the destructured testData object', () => {
+            const circle = new Circle(text, color, background);
+            expect(circle.text).toEqual(text);
+            // console.log(`Circle text: ${circle.text}`)
+        })
+    })
 });
 
 describe('Square', () => {
