@@ -38,7 +38,7 @@ Credit goes to Bobbi Tarkany for updating the modules to export as objects to de
 
 ## Tests
 
-This application was tested using the jest module.  Tests were developed for each class within the `shapes.js` file.  The file used to test the application's functionality is `shapes.test.js`.  Each class was tested to ensure it was properly creating an instance of the parent class.  The render function of each of class was also tested to verify its output was properly generating the syntax required to generate the SVG logo and the shape selected.
+This application was tested using the `jest` module.  Tests were developed for each class within the `shapes.js` file.  The file used to test the application's functionality is `shapes.test.js`.  Each class was tested to ensure it was properly creating an instance of the parent class.  The render function of each of class was also tested to verify its output was properly generating the syntax required to generate the SVG logo and the shape selected.
 
 ## Questions
 
