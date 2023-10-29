@@ -6,7 +6,6 @@ const shapesArray = ['Circle', 'Triangle', 'Square'];
 
 const questions = [
     {   
-        // This needs a test to make sure the length doens't exceed three characters.
         type: 'input',
         message: `Please enter up to three characters for your logo's text.`,
         name: 'text',
