@@ -64,7 +64,7 @@ describe('Triangle', () => {
             const triangle = new Triangle(text, color, background);
             console.log(triangle.render())
            
-            expect(triangle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><polygon points="150, 18 244, 182 56, 182" fill="${background}" /><text x="150" y="150" font-size="60" text-anchor="middle" fill="${color}">${text}</text></svg>`)
+            expect(triangle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><polygon points="150, 18 244, 182 56, 182" fill="${this.background}" /><text x="150" y="150" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text></svg>`)
         })
     })
 });
@@ -81,7 +81,13 @@ describe('Circle', () => {
         it('should output the text value of the destructured testData object', () => {
             const circle = new Circle(text, color, background);
             expect(circle.text).toEqual(text);
-            // console.log(`Circle text: ${circle.text}`)
+        })
+    })
+
+    describe('Circle render function', () => {
+        it('should render the svg logo text returned from the Circle class render function', () => {
+            const circle = new Circle();
+            expect(circle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="80" fill="${this.background}" /><text x="150" y="125" font-size="60" text-anchor="middle" fill="${this.color}">${this.text}</text></svg>`)
         })
     })
 });
