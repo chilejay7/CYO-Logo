@@ -1,8 +1,5 @@
 const indexScript = require('../index.js');
-const Shape = require('../lib/shapes.js');
-const Triangle = require('../lib/shapes.js');
-const Circle = require('../lib/shapes.js');
-const Square = require('../lib/shapes.js');
+const {Shape, Triangle, Circle, Square} = require('../lib/shapes.js');
 
 const testData = {
     text: "lvr",
@@ -65,14 +62,9 @@ describe('Triangle', () => {
     describe('Triangle render function', () => {
         it('should render the svg logo when the render method is called', () => {
             const triangle = new Triangle(text, color, background);
+            console.log(triangle.render())
            
-            expect(triangle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-
-            <polygon points="150, 18 244, 182 56, 182" fill="${background}" />
-
-            <text x="150" y="150" font-size="60" text-anchor="middle" fill="${color}">${text}</text>
-
-            </svg>`)
+            expect(triangle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><polygon points="150, 18 244, 182 56, 182" fill="${background}" /><text x="150" y="150" font-size="60" text-anchor="middle" fill="${color}">${text}</text></svg>`)
         })
     })
 });
