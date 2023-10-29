@@ -11,7 +11,7 @@ const testData = {
     background: "blue",
 }
 
-const { text, color, shape, background } = testData
+const { text, color, shape, background } = testData 
 
 describe('Shape', () => {
     describe('Create new instance', () => {
