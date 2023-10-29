@@ -1,4 +1,6 @@
 # CYO Logo Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 This application uses Node.js to build a custom SVG logo based on user input.
 
 ## Description
