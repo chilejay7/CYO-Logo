@@ -5,7 +5,7 @@ This application uses Node.js to build a custom SVG logo based on user input.
 
 Every developer needs a logo to uniquely present and mark their work.  Hiring a professional artist to create a custom logo can be expensive.  That's where this application fills a need.  Developers can generate a custom SVG logo in one of three shapes: a square, triangle, or circle.  Up to three letters can be included in the logo's text, and custom colors can be used for the background and text.  Running the index.js file will prompt the developer for the information needed to generate the logo and use the input to generate the custom SVG file.
 
-![CYO Logo Application]()
+![CYO Logo Application](./CYO_Logo_Generator_Demo.gif)
 
 ## Table of Contents 
 
@@ -22,9 +22,9 @@ The CYO Logo application can be installed by cloning the repository to your loca
 
 ## Usage
 
-The application is initialized by running the node index.js command through the terminal.  When the index.js file is called it runs the inquirer prompts to retrieve input from the developer about their logo.  Inquirer will prompt for three different pieces of information: logo text, text color, logo shape, and the logo's background color.  The text input will accept text up to three characters.  The colors for both the text and background will accept input of either names or hexidemial values.  The shapes prompt will present the developer with a list of options.  The options are generated from an array and can be navigated using the up and down arrow keys.  Pressing Enter will accept the selection.  If at any time a mistake is made or a value is entered incorrectly, the developer can exit the prompts and stop the logo's creation using ctrl + C.  Once all prompts have been answered the custom logo SVG file is generated.  It will be labeled with the name "logo_shape.svg".
+The application is initialized by running the node index.js command through the terminal.  When the index.js file is called it runs the inquirer prompts to retrieve input from the developer about their logo.  Inquirer will prompt for three different pieces of information: logo text, text color, logo shape, and the logo's background color.  The text input will accept text up to three characters.  The colors for both the text and background will accept input of either names or hexademial values.  The shapes prompt will present the developer with a list of options.  The options are generated from an array and can be navigated using the up and down arrow keys.  Pressing Enter will accept the selection.  If at any time a mistake is made or a value is entered incorrectly, the developer can exit the prompts and stop the logo's creation using ctrl + C.  Once all prompts have been answered the custom logo SVG file is generated.  It will be labeled with the name "logo_shape.svg".
 
-A link to the video demonstrating the appliation's use can be found here: [Walkthrough Video]()
+A link to the video demonstrating the application's use can be found here: [Walkthrough Video](https://drive.google.com/file/d/1marQcYpmfynJUbG59e_q3WAczKe5DOaF/view)
 
 ## License
 
@@ -34,11 +34,11 @@ This application is covered under the license linked below.  For further informa
 
 ## Contributions
 
-There were not any contributions from other developers used in the creation of this project.
+Credit goes to Bobbi Tarkany for updating the modules to export as objects to debug the render function tests.
 
 ## Tests
 
-This application was tested using the jest module.  Tests were developed for each class within the shapes.js file.  The file used to test the application's functionality is shapes.test.js.  Each class was tested to ensure it was properly creating a instance of the parent class.  The render function of each of class was also tested to verify its output was properly generating the syntax required to generate the SVG logo and the shape selected.
+This application was tested using the jest module.  Tests were developed for each class within the shapes.js file.  The file used to test the application's functionality is shapes.test.js.  Each class was tested to ensure it was properly creating an instance of the parent class.  The render function of each of class was also tested to verify its output was properly generating the syntax required to generate the SVG logo and the shape selected.
 
 ## Questions
 
