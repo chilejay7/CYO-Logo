@@ -11,7 +11,7 @@ const testData = {
     background: "blue",
 }
 
-const { text, color, shape, background } = testData
+const { text, color, shape, background } = testData 
 
 describe('Shape', () => {
     describe('Create new instance', () => {
@@ -66,7 +66,7 @@ describe('Triangle', () => {
         it('should render the svg logo when the render method is called', () => {
             const triangle = new Triangle(text, color, background);
            
-            expect(triangle.super.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+            expect(triangle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
             <polygon points="150, 18 244, 182 56, 182" fill="${background}" />
 
