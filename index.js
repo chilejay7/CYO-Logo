@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
-const createLogo = require('./lib/shapes.js');
+const {createSVG} = require('./lib/shapes.js');
 
 const shapesArray = ['Circle', 'Triangle', 'Square'];
 
