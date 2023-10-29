@@ -81,7 +81,13 @@ describe('Circle', () => {
         it('should output the text value of the destructured testData object', () => {
             const circle = new Circle(text, color, background);
             expect(circle.text).toEqual(text);
-            // console.log(`Circle text: ${circle.text}`)
+        })
+    })
+
+    describe('Circle render function', () => {
+        it('should render the svg logo text returned from the Circle class render function', () => {
+            const circle = new Circle(text, color, background);
+            expect(circle.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><circle cx="150" cy="100" r="80" fill="${background}" /><text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text></svg>`)
         })
     })
 });
@@ -93,4 +99,11 @@ describe('Square', () => {
             expect(square).toBeInstanceOf(Square);
         })
     });
+
+    describe('Square render function', () => {
+        it('should render the svg logo text returned from the sqaure class render function', () => {
+            const square = new Square(text, color, background);
+            expect(square.render()).toMatch(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"><rect x="25" y="25" rx="10" ry="10" width="150" height="150" fill="${background}" /><text x="100" y="115" font-size="60" text-anchor="middle" fill="${color}">${text}</text></svg>`)
+        })
+    })
 });
