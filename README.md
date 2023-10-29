@@ -1,4 +1,4 @@
-# CYO-Logo
+# CYO Logo Generator
 This application uses Node.js to build a custom SVG logo based on user input.
 
 ## Description
