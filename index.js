@@ -10,6 +10,13 @@ const questions = [
         type: 'input',
         message: `Please enter up to three characters for your logo's text.`,
         name: 'text',
+
+        validate: function(name) {
+            while(name.length > 3) {
+                return `The name you entered was longer than three characters.  Please enter up to three characters for your logo's text.`
+            }
+            return true;
+        }
     },
     {
         type: 'input',
