@@ -5,7 +5,7 @@ This application uses Node.js to build a custom SVG logo based on user input.
 
 ## Description
 
-Every developer needs a logo to uniquely present and mark their work.  Hiring a professional artist to create a custom logo can be expensive.  That's where this application fills a need.  Developers can generate a custom SVG logo in one of three shapes: a square, triangle, or circle.  Up to three letters can be included in the logo's text, and custom colors can be used for the background and text.  Running the index.js file will prompt the developer for the information needed to generate the logo and use the input to generate the custom SVG file.
+Every developer needs a logo to uniquely present and identify their work.  Hiring a professional artist to create a custom logo can be expensive.  That's where this application fills a need.  Developers can generate a custom SVG logo in one of three shapes: a square, triangle, or circle.  Up to three letters can be included in the logo's text, and custom colors can be used for the background and text.  Running the index.js file will prompt the developer for the information needed to generate the logo and use the input to generate the custom SVG file.
 
 ![CYO Logo Application](./CYO_Logo_Generator_Demo.gif)
 
